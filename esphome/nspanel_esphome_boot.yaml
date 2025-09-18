@@ -222,6 +222,12 @@ script:
           disp1->set_component_font("home.wifi_icon", id(home_chip_font_id));
           disp1->set_component_font_color("home.chip_relay1", id(home_relay1_icon_color));
           disp1->set_component_font_color("home.chip_relay2", id(home_relay2_icon_color));
+          // Hide chip relays on boot
+          disp1->hide_component("chip_relay1");
+          add_component_visibility(${PAGE_HOME_ID}, "chip_relay1", false);
+          disp1->hide_component("chip_relay2");
+          add_component_visibility(${PAGE_HOME_ID}, "chip_relay2", false);
+
 
       # Bluetooth icon
       - delay: ${DELAY_DEFAULT}ms
