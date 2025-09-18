@@ -61,8 +61,8 @@ api:
         # Chips icon size
         - delay: ${DELAY_DEFAULT}ms
         - lambda: |-
-            disp1->hide_component("chip_relay1");
-            disp1->hide_component("chip_relay2");
+            disp1->hide_component("home.chip_relay1");
+            disp1->hide_component("home.chip_relay2");
             disp1->set_component_font("home.chip_relay1", chip_font);
             disp1->set_component_font("home.chip_relay2", chip_font);
             disp1->set_component_font("home.chip_climate", chip_font);
